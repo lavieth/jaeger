@@ -85,8 +85,8 @@ func (d *database) Get(ctx context.Context, customerID string) (*Customer, error
 
 	if !config.MySQLMutexDisabled {
 		// simulate misconfigured connection pool that only gives one connection at a time
-		d.lock.Lock(ctx)
-		defer d.lock.Unlock()
+	//	d.lock.Lock(ctx)
+	//	defer d.lock.Unlock()
 	}
 
 	// simulate RPC delay
